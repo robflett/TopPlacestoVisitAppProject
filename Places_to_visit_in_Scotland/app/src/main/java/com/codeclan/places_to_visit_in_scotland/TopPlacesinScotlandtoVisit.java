@@ -32,9 +32,12 @@ public class TopPlacesinScotlandtoVisit {
         place.add(new Place(20, "Coldstream Beach", "East Coast", "Walking"));
     }
 
- public ArrayList<Place> getList(){
-     return new ArrayList<Place>(place);
- }
+        public ArrayList<Place> getList(){
+            return new ArrayList<Place>(place);
+    }
 
+
+//        public void add(Place place) {
+//        }
 }
 
