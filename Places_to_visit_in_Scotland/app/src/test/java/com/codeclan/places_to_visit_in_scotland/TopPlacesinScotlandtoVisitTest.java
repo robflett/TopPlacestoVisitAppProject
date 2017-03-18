@@ -16,7 +16,7 @@ public class TopPlacesinScotlandtoVisitTest {
 
         @Before
         public void before() {
-        place = new Place(7, "Strontian", "West Coast", "Surfing");
+        place = new Place(7, "Strontian", "West Coast", Activity.SURFING);
     }
 
 
@@ -24,6 +24,14 @@ public class TopPlacesinScotlandtoVisitTest {
         public void getListTest() {
             TopPlacesinScotlandtoVisit topPlaces = new TopPlacesinScotlandtoVisit();
             assertEquals(20, topPlaces.getList().size());
+        }
+
+        @Test
+        public void addToListTest(){
+            TopPlacesinScotlandtoVisit topPlaces = new TopPlacesinScotlandtoVisit();
+            topPlaces.addPlace(place);
+            assertEquals(21, topPlaces.getList().size());
+
         }
 
     }
