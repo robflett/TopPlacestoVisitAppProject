@@ -26,12 +26,5 @@ public class TopPlacesinScotlandtoVisitTest {
             assertEquals(20, topPlaces.getList().size());
         }
 
-        @Test
-        public void addToListTest(){
-            TopPlacesinScotlandtoVisit topPlaces = new TopPlacesinScotlandtoVisit();
-            topPlaces.add(place);
-
-            assertEquals(21, topPlaces.getList().size());
-        }
     }
 

@@ -37,7 +37,5 @@ public class TopPlacesinScotlandtoVisit {
     }
 
 
-//        public void add(Place place) {
-//        }
 }
 
