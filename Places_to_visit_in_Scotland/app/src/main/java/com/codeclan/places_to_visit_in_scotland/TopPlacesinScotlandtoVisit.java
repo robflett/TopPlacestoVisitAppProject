@@ -38,10 +38,10 @@ public class TopPlacesinScotlandtoVisit {
             return new ArrayList<Place>(listing);
     }
 
-//        public ArrayList<Place> sortByActivity(){
-//            new ArrayList<Place>(Arrays.asList(Place.values()));
-//            return null;
-//            }
+        public ArrayList<Place> sortByActivity(){
+            new ArrayList<Place>(Arrays.asList(Place.activities.values()));
+            return null;
+            }
 
         public void addPlace (Place place){
             listing.add(place);
