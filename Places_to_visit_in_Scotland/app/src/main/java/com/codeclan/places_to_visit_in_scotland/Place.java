@@ -2,6 +2,11 @@ package com.codeclan.places_to_visit_in_scotland;
 
 import java.lang.reflect.Array;
 
+enum Activity{
+
+    SURFING, WALKING, FOOD, HISTORIC, SAILING
+
+};
 
 
 public class Place {
@@ -9,13 +14,15 @@ public class Place {
     private int ranking;
     private String placename;
     private String location;
-    private String activities;
+    private Activity activities;
 
-    public Place(Integer ranking, String placename, String location, String activities) {
+
+    public Place(Integer ranking, String placename, String location, Activity activities) {
         this.ranking = ranking;
         this.placename = placename;
         this.location = location;
         this.activities = activities;
+
     }
 
     public Integer getRanking() {
@@ -42,11 +49,11 @@ public class Place {
         this.location = location;
     }
 
-    public String getActivities() {
+    public Activity getActivities() {
         return activities;
     }
 
-    public void setActivities(String activities) {
+    public void setActivities(Activity activities) {
         this.activities = activities;
     }
 }
