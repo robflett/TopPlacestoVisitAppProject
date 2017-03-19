@@ -3,6 +3,8 @@ package com.codeclan.places_to_visit_in_scotland;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class TopPlacesinScotlandtoVisit {
@@ -38,13 +40,22 @@ public class TopPlacesinScotlandtoVisit {
             return new ArrayList<Place>(listing);
     }
 
-//        public ArrayList<Place> sortByActivity(){
-//            new ArrayList<Place>(Arrays.asList(Place.activities.toString().values()));
-//            return null;
-//            }
+        public Set<String> filterByActivity(){
+
+            Set<String> setofActivities = new HashSet<String>();
+
+            for (Place entry : listing) {
+                setofActivities.add(entry.getActivities());
+            }
+
+            for (String name : setofActivities) {
+                System.out.println(name);
+            }
+
+            return setofActivities;
+        }
 
 
-//   what to do above - how to sort by an enum property?
 
         public void addPlace (Place place){
             listing.add(place);
