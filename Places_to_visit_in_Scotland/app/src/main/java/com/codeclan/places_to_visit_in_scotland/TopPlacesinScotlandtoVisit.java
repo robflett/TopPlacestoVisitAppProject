@@ -2,9 +2,13 @@ package com.codeclan.places_to_visit_in_scotland;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.function.Predicate;
+
+import static android.R.id.list;
 
 
 public class TopPlacesinScotlandtoVisit {
@@ -40,7 +44,7 @@ public class TopPlacesinScotlandtoVisit {
             return new ArrayList<Place>(listing);
     }
 
-        public Set<String> filterByActivity(){
+        public String filterByActivity(){
 
             Set<String> setofActivities = new HashSet<String>();
 
@@ -52,8 +56,9 @@ public class TopPlacesinScotlandtoVisit {
                 System.out.println(name);
             }
 
-            return setofActivities;
+            return setofActivities.toString();
         }
+    
 
 
 

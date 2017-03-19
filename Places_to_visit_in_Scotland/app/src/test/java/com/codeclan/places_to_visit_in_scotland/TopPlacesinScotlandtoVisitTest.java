@@ -38,7 +38,7 @@ public class TopPlacesinScotlandtoVisitTest {
         public void testFilterbyActivity(){
             TopPlacesinScotlandtoVisit topPlaces = new TopPlacesinScotlandtoVisit();
 
-            assertEquals(([Walking, Sailing, Historic, Surfing, Food]), topPlaces.filterByActivity());
+            assertEquals(("[Walking, Sailing, Historic, Surfing, Food]"), topPlaces.filterByActivity());
         }
 
     }
