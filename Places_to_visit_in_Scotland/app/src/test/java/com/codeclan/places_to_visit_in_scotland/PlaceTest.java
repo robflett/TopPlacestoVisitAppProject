@@ -11,7 +11,7 @@ public class PlaceTest {
 
     @Before
     public void before() {
-        place = new Place(7, "Strontian", "West Coast", Activity.SURFING);
+        place = new Place(7, "Strontian", "West Coast", "Surfing");
     }
 
 
