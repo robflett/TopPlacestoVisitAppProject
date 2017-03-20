@@ -2,12 +2,14 @@ package com.codeclan.places_to_visit_in_scotland;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
 
 import static org.junit.Assert.assertEquals;
-
+import static org.junit.Assert.assertNotNull;
 
 
 public class TopPlacesinScotlandtoVisitTest {
@@ -16,7 +18,7 @@ public class TopPlacesinScotlandtoVisitTest {
 
         @Before
         public void before() {
-        place = new Place(7, "Strontian", "West Coast", "Surfing");
+        place = new Place(2, "Forteviot", "Perthshire", "Walking");
     }
 
 
@@ -39,6 +41,16 @@ public class TopPlacesinScotlandtoVisitTest {
             TopPlacesinScotlandtoVisit topPlaces = new TopPlacesinScotlandtoVisit();
 
             assertEquals(("[Walking, Sailing, Historic, Surfing, Food]"), topPlaces.filterByActivity());
+        }
+
+        @Test
+        public void testGetbyActivity(){
+            TopPlacesinScotlandtoVisit topPlaces = new TopPlacesinScotlandtoVisit();
+//            topPlaces.getByActivity("Walking");
+
+
+
+            assertNotNull(topPlaces.getByActivity("Walking"));
         }
 
     }

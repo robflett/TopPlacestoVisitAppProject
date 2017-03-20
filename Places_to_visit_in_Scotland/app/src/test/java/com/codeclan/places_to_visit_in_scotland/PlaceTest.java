@@ -35,7 +35,7 @@ public class PlaceTest {
 
     @Test
     public void getActivitiesTest() {
-        assertEquals("Surfing", place.getActivities());
+        assertEquals("Surfing", place.getActivity());
     }
 
 }

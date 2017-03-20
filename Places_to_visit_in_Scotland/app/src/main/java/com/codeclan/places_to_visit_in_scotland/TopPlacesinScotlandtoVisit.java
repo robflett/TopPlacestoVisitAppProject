@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.function.Predicate;
+//import java.util.function.Predicate;
 
 import static android.R.id.list;
 
@@ -49,7 +49,7 @@ public class TopPlacesinScotlandtoVisit {
             Set<String> setofActivities = new HashSet<String>();
 
             for (Place entry : listing) {
-                setofActivities.add(entry.getActivities());
+                setofActivities.add(entry.getActivity());
             }
 
             for (String name : setofActivities) {
@@ -58,7 +58,20 @@ public class TopPlacesinScotlandtoVisit {
 
             return setofActivities.toString();
         }
-    
+
+        public ArrayList<Place> getByActivity(String activity){
+
+            ArrayList<Place> places = new ArrayList<>();
+
+
+            for (Place entry : listing) {
+                if (entry.getActivity().equals(activity)) {
+                    places.add(entry);
+                }
+            }
+
+            return places;
+        }
 
 
 

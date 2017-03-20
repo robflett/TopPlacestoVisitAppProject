@@ -14,14 +14,14 @@ public class Place {
     private int ranking;
     private String placename;
     private String location;
-    private String activities;
+    private String activity;
 
 
-    public Place(Integer ranking, String placename, String location, String activities) {
+    public Place(Integer ranking, String placename, String location, String activity) {
         this.ranking = ranking;
         this.placename = placename;
         this.location = location;
-        this.activities = activities;
+        this.activity = activity;
 
     }
 
@@ -49,11 +49,11 @@ public class Place {
         this.location = location;
     }
 
-    public String getActivities() {
-        return activities;
+    public String getActivity() {
+        return activity;
     }
 
-    public void setActivities(String activities) {
-        this.activities = activities;
+    public void setActivities(String activity) {
+        this.activity = activity;
     }
 }
