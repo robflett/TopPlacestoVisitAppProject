@@ -1,6 +1,7 @@
 package com.codeclan.places_to_visit_in_scotland;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        TextView list = (TextView)findViewById(R.id.favourites_list);
+        TextView list = (TextView)findViewById(R.id.expanded_list);
 
         String itemString = " ";
 
@@ -132,9 +133,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void placeClicked(View textView) {
+    public void onPlaceClicked(View textView) {
         TextView title = (TextView) textView;
         Log.d("Place clicked", title.getText().toString());
+        Intent intent = new Intent(this, ExpandableActivity.class);
+        startActivity(intent);
     }
 
     @Override
