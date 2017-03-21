@@ -23,33 +23,36 @@ public class MainActivity extends AppCompatActivity {
     public static final String LISTPLACE = "MyList";
 
     ArrayList<Place> listing;
+    TopPlacesinScotlandtoVisit topPlaces;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        listing = topPlaces.getList();
 
-        listing = new ArrayList<Place>();
-        listing.add(new Place(1, "Melvich Bay", "Sutherland", "Surfing"));
-        listing.add(new Place(2, "Forteviot", "Perthshire", "Walking"));
-        listing.add(new Place(3, "Sands of Morar", "West Coast", "Walking"));
-        listing.add(new Place(4, "Tobermory", "Mull", "Food"));
-        listing.add(new Place(5, "Skye", "Western Isles", "Walking"));
-        listing.add(new Place(6, "The wee green van", "Portobello Beach","Food"));
-        listing.add(new Place(7, "Callander", "Stirlingshire", "Historic"));
-        listing.add(new Place(8, "North Berwick", "East Lothian", "Walking"));
-        listing.add(new Place(9, "Anstruther", "Fife", "Food"));
-        listing.add(new Place(10, "Wick", "Sutherland", "Food"));
-        listing.add(new Place(11, "Cairngorms National Park", "Cairngorms", "Walking"));
-        listing.add(new Place(12, "Linlithgow Palace", "Linlithgow", "Historic"));
-        listing.add(new Place(13, "The Peat Road", "Sutherland", "Walking"));
-        listing.add(new Place(14, "St Andrews", "East Coast", "Historic"));
-        listing.add(new Place(15, "Arthurs Seat", "Edinburgh", "Walking"));
-        listing.add(new Place(16, "Loch Vennacher", "Stirlingshire", "Sailing"));
-        listing.add(new Place(17, "Thornhill", "Stirlingshire", "Food"));
-        listing.add(new Place(18, "Mallaig", "West Coast", "Food"));
-        listing.add(new Place(19, "Leith Shore", "Edinburgh", "Food"));
-        listing.add(new Place(20, "Coldstream Beach", "East Coast", "Walking"));
+//
+//        listing = new ArrayList<Place>();
+//        listing.add(new Place(1, "Melvich Bay", "Sutherland", "Surfing"));
+//        listing.add(new Place(2, "Forteviot", "Perthshire", "Walking"));
+//        listing.add(new Place(3, "Sands of Morar", "West Coast", "Walking"));
+//        listing.add(new Place(4, "Tobermory", "Mull", "Food"));
+//        listing.add(new Place(5, "Skye", "Western Isles", "Walking"));
+//        listing.add(new Place(6, "The wee green van", "Portobello Beach","Food"));
+//        listing.add(new Place(7, "Callander", "Stirlingshire", "Historic"));
+//        listing.add(new Place(8, "North Berwick", "East Lothian", "Walking"));
+//        listing.add(new Place(9, "Anstruther", "Fife", "Food"));
+//        listing.add(new Place(10, "Wick", "Sutherland", "Food"));
+//        listing.add(new Place(11, "Cairngorms National Park", "Cairngorms", "Walking"));
+//        listing.add(new Place(12, "Linlithgow Palace", "Linlithgow", "Historic"));
+//        listing.add(new Place(13, "The Peat Road", "Sutherland", "Walking"));
+//        listing.add(new Place(14, "St Andrews", "East Coast", "Historic"));
+//        listing.add(new Place(15, "Arthurs Seat", "Edinburgh", "Walking"));
+//        listing.add(new Place(16, "Loch Vennacher", "Stirlingshire", "Sailing"));
+//        listing.add(new Place(17, "Thornhill", "Stirlingshire", "Food"));
+//        listing.add(new Place(18, "Mallaig", "West Coast", "Food"));
+//        listing.add(new Place(19, "Leith Shore", "Edinburgh", "Food"));
+//        listing.add(new Place(20, "Coldstream Beach", "East Coast", "Walking"));
 
         TopPlacesinScotlandtoVisit topPlaces = new TopPlacesinScotlandtoVisit();
         ArrayList<Place> listofplaces = topPlaces.getList();
@@ -61,15 +64,21 @@ public class MainActivity extends AppCompatActivity {
 
 
         SharedPreferences sharedPref = getSharedPreferences(LISTPLACE, Context.MODE_PRIVATE);
-
         String favourites = sharedPref.getString("listKey", "null");
 
+
+        //Check if favourites.equals("null");
+        //if it's "null" save listing to sharedPreferences
+        //Else carry on
 
         Gson gson = new Gson();
 
         TypeToken<ArrayList<Place>> placesArrayList = new TypeToken<ArrayList<Place>>(){};
 
         ArrayList<Place> myList = gson.fromJson(favourites, placesArrayList.getType());
+
+        //Create ListView with list_items
+        //Use setTag(a Place object) in TopPlaceAdapter to setTag of a ListItem aplace
 
 
         TextView list = (TextView)findViewById(R.id.favourites_list);
@@ -102,4 +111,6 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(MainActivity.this, "New place to visit added!", Toast.LENGTH_LONG).show();
 
     }
+
+
 }
