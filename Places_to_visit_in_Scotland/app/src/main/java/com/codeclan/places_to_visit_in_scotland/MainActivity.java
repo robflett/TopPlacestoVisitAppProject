@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.view.Menu;
@@ -62,16 +63,25 @@ public class MainActivity extends AppCompatActivity {
         ListView listview = (ListView) findViewById(R.id.list);
         listview.setAdapter(placeAdapter);
 
+        Gson gson = new Gson();
 
         SharedPreferences sharedPref = getSharedPreferences(LISTPLACE, Context.MODE_PRIVATE);
-        String favourites = sharedPref.getString("listKey", "null");
+        SharedPreferences.Editor editor = sharedPref.edit();
 
+        String favourites = sharedPref.getString("listKey", null);
 
+        if (favourites.equals(null)){
+
+            editor.putString("listKey", gson.toJson(listing));
+
+            editor.apply();
+
+        }
         //Check if favourites.equals("null");
         //if it's "null" save listing to sharedPreferences
         //Else carry on
 
-        Gson gson = new Gson();
+
 
         TypeToken<ArrayList<Place>> placesArrayList = new TypeToken<ArrayList<Place>>(){};
 
@@ -79,6 +89,15 @@ public class MainActivity extends AppCompatActivity {
 
         //Create ListView with list_items
         //Use setTag(a Place object) in TopPlaceAdapter to setTag of a ListItem aplace
+
+
+
+
+//        ListAdapter listAdapter = new ListAdapter(this, listofplaces);
+
+        ListView listItemView = (ListView)findViewById(R.id.list_items);
+        listItemView.setAdapter(placeAdapter);
+
 
 
         TextView list = (TextView)findViewById(R.id.favourites_list);
