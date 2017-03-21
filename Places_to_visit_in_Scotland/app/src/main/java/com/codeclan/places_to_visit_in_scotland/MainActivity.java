@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView list = (TextView)findViewById(R.id.favourites_list);
 
-        String itemString = "";
+        String itemString = " ";
 
         for(Place item : myList){
             itemString += item.getPlacename() + " " + item.getLocation() + " " + item.getActivity() + "\r\n";

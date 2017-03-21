@@ -76,6 +76,7 @@ public class TopPlacesinScotlandtoVisit {
 
 
         public void addPlace (Place place){
+
             listing.add(place);
         }
 
