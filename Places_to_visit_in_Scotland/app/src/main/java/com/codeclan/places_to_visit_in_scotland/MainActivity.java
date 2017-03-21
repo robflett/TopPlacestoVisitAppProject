@@ -137,5 +137,12 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Place clicked", title.getText().toString());
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+//        Inflating the menu.
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.activity_main, menu);
+        return true;
+    }
 
 }
