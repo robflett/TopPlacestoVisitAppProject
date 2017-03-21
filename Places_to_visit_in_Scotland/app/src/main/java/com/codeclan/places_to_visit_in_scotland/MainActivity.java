@@ -68,9 +68,9 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPref = getSharedPreferences(LISTPLACE, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
 
-        String favourites = sharedPref.getString("listKey", null);
+        String favourites = sharedPref.getString("listKey", "null");
 
-        if (favourites.equals(null)){
+        if (favourites.equals("null")){
 
             editor.putString("listKey", gson.toJson(listing));
 

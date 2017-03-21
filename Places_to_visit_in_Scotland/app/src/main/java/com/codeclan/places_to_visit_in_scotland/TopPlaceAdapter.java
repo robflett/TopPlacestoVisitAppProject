@@ -9,9 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by user on 20/03/2017.
- */
+
 
 public class TopPlaceAdapter extends ArrayAdapter<Place> {
 
