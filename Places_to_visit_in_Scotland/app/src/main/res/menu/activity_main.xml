@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/main_page"
-        android:title="@string/back_main"
+        android:title="@string/back_main"/>
 
     <item android:id="@+id/add_new_place"
         android:title="@string/add_new"

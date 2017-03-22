@@ -130,6 +130,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
+        if (item.getItemId() == R.id.main_page){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+
         if (item.getItemId() == R.id.add_new_place){
             Intent intent = new Intent(this, addNewPlaceActivity.class);
             startActivity(intent);
