@@ -20,7 +20,7 @@
         android:textSize="50dp"
         android:textAlignment="center"
         android:layout_marginRight="20dp"
-        android:textColor="#fe00c8ff"
+        android:textColor="#fe6c6b6b"
         />
 
     <LinearLayout
