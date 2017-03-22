@@ -7,4 +7,6 @@
     <string name="walking_filter">Great for walking!</string>
     <string name="food_filter">Great for food!</string>
     <string name="newplace">Add a new place</string>
+    <string name="urllink"><a href="http://www.visitscotland.com">Click here for VisitScotland</a></string>
+
 </resources>

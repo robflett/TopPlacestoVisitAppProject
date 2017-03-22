@@ -3,6 +3,9 @@ package com.codeclan.places_to_visit_in_scotland;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,6 +16,9 @@ public class ExpandableActivity extends AppCompatActivity {
     TextView placeText;
     TextView locationText;
     TextView activityText;
+
+    TextView HyperLink;
+    Spanned Text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +44,16 @@ public class ExpandableActivity extends AppCompatActivity {
 
         activityText = (TextView)findViewById(R.id.activity);
         activityText.setText(placename + " is great for " + activity);
+
+
+
+        HyperLink = (TextView)findViewById(R.id.urllink);
+
+        Text = Html.fromHtml("Click here to go to Visit Scotland <br />" +
+                "<a href='http://www.visitscotland.com//'>VisitScotland.com</a>");
+
+        HyperLink.setMovementMethod(LinkMovementMethod.getInstance());
+        HyperLink.setText(Text);
 
     }
 
