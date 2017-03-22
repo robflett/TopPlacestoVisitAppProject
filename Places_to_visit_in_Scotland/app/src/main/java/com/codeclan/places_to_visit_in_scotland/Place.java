@@ -1,5 +1,6 @@
 package com.codeclan.places_to_visit_in_scotland;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 
 //enum Activity{
@@ -9,7 +10,7 @@ import java.lang.reflect.Array;
 //};
 
 
-public class Place {
+public class Place implements Serializable{
 
     private int ranking;
     private String placename;

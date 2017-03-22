@@ -18,9 +18,10 @@ public class ExpandableActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
-        String details = extras.get("Place");
 
-        Place place = new Place();
+        Place place = (Place)extras.getSerializable("Place");
+
+//        Place place = new Place();
         String placename = place.getPlacename();
         String location = place.getLocation();
         String activity = place.getActivity();

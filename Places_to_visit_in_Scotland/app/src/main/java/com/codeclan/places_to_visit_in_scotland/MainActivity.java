@@ -116,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
        Place aplace = (Place) textView.getTag();
         Log.d("clicked", aplace.toString());
         Intent intent = new Intent(this, ExpandableActivity.class);
+        intent.putExtra("Place", aplace);
         startActivity(intent);
     }
 
