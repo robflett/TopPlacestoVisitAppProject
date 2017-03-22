@@ -9,6 +9,10 @@
         android:title="@string/walking_filter"
         />
 
+    <item android:id="@+id/filter_by_food"
+        android:title="@string/food_filter"
+        />
+
 
 
 
