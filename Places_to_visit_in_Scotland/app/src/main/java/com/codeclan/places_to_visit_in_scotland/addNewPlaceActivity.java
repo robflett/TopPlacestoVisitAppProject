@@ -11,12 +11,20 @@ import android.widget.EditText;
 
 public class addNewPlaceActivity extends AppCompatActivity {
 
+    public static final String ADD_NEW_PLACE = "newplace";
+
+    private EditText newplaceView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_place);
 
+    newplaceView = (EditText) findViewById(R.id.newplaceText);
 
+    }
+
+    public void addnewClicked(View view) {
 
     }
 

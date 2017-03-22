@@ -5,13 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.codeclan.places_to_visit_in_scotland.addNewPlaceActivity">
+    
+    <TextView
+        android:id="@+id/newPlaceLabel"
+        android:text="@string/newplace"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="20dp"
+        />
+
+
+    
+    <EditText
+        android:id="@+id/newplaceText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="20dp"
+        android:layout_below="@+id/newPlaceLabel"
+        />
 
     <Button
         android:id="@+id/addBtn"
         android:text="Add New Place"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:onClick="addPlace"/>
+        android:layout_below="@+id/newplaceText"
+        android:onClick="addnewClicked"/>
+
     <ListView
         android:id="@android:id/list"
         android:layout_width="fill_parent"
