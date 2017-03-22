@@ -6,17 +6,28 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
+import android.widget.TextView;
 
-public class addNewPlaceActivity extends AppCompatActivity {
+public class Filter_by_Food_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_new_place);
+        setContentView(R.layout.activity_filter_by__food_);
 
 
+        TopPlacesinScotlandtoVisit walkingPlaces = new TopPlacesinScotlandtoVisit();
+        walkingPlaces.getByActivity("Food");
+
+
+        String filteredPlaces = "";
+
+        for(Place place : walkingPlaces.getByActivity("Food")){
+            filteredPlaces += place.getPlacename() + " in " + place.getLocation() + " is great for food\n";
+        }
+
+        TextView tv = (TextView) findViewById(R.id.filtered_places);
+        tv.setText(filteredPlaces);
 
     }
 
@@ -50,4 +61,5 @@ public class addNewPlaceActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

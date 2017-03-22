@@ -142,6 +142,12 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+        if (item.getItemId() == R.id.filter_by_food){
+            Intent intent = new Intent(this, Filter_by_Food_Activity.class);
+            startActivity(intent);
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
