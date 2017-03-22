@@ -135,7 +135,16 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+
+        if (item.getItemId() == R.id.filter_by_walking){
+            Intent intent = new Intent(this, Filter_by_Walking_Activity.class);
+            startActivity(intent);
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
+
+
 
 }

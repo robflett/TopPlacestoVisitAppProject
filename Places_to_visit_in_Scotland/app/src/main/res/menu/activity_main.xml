@@ -5,6 +5,11 @@
         android:title="@string/add_new"
         />
 
+    <item android:id="@+id/filter_by_walking"
+        android:title="@string/walking_filter"
+        />
+
+
 
 
 

@@ -16,8 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ExpandableActivity"></activity>
-        <activity android:name=".addNewPlaceActivity"></activity>
+        <activity android:name=".ExpandableActivity" />
+        <activity android:name=".addNewPlaceActivity" />
+        <activity android:name=".Filter_by_Walking_Activity"></activity>
     </application>
 
 </manifest>

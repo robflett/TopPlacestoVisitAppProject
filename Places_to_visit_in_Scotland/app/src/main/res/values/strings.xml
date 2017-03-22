@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Places to visit in Scotland</string>
     <string name="add_new">Add a new place!</string>
+    <string name="walking_filter">Great for walking!</string>
 </resources>
