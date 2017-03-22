@@ -76,12 +76,12 @@ public class MainActivity extends AppCompatActivity {
 //        listItemView.setAdapter(placeAdapter);
 //
 //
-//
+////
 //        TextView list = (TextView)findViewById(R.id.expanded_list);
 //
 //        String itemString = " ";
 //
-//        for(Place item : myList){
+//        for(Place item : MyList){
 //            itemString += item.getPlacename() + " " + item.getLocation() + " " + item.getActivity() + "\r\n";
 //        }
 //
@@ -157,20 +157,20 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected void onActivityResult(int addedplace, int newlist, Intent toList) {
-
-        if (addedplace == ADD_PLACE) {
-
-            if (newlist == RESULT_OK) {
-
-                Place newplace = toList.getStringExtra(addNewPlaceActivity.ADD_NEW_PLACE);
-                listing.add(newplace);
-
-                TopPlaceAdapter.notifyDataSetChanged();
-            }
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int addedplace, int newlist, Intent toList) {
+//
+//        if (addedplace == ADD_PLACE) {
+//
+//            if (newlist == RESULT_OK) {
+//
+//                Place newplace = toList.getStringExtra(addNewPlaceActivity.ADD_NEW_PLACE);
+//                listing.add(newplace);
+//
+//                TopPlaceAdapter.notifyDataSetChanged();
+//            }
+//        }
+//    }
 
 
 

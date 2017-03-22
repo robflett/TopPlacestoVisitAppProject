@@ -23,7 +23,7 @@ public class Filter_by_Food_Activity extends AppCompatActivity {
         String filteredPlaces = "";
 
         for(Place place : walkingPlaces.getByActivity("Food")){
-            filteredPlaces += place.getPlacename() + " in " + place.getLocation() + " is great for food\n";
+            filteredPlaces += place.getPlacename() + " in " + place.getLocation() + "\n";
         }
 
         TextView tv = (TextView) findViewById(R.id.filtered_places);

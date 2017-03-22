@@ -24,7 +24,7 @@ public class Filter_by_Walking_Activity extends AppCompatActivity {
         String filteredPlaces = "";
 
         for(Place place : walkingPlaces.getByActivity("Walking")){
-            filteredPlaces += place.getPlacename() + " in " + place.getLocation() + " is great for walking\n";
+            filteredPlaces += place.getPlacename() + " in " + place.getLocation() + "\n";
         }
 
         TextView tv = (TextView) findViewById(R.id.filtered_places);
