@@ -10,4 +10,6 @@ public class ExpandableActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.expandable_items);
     }
+
+
 }
