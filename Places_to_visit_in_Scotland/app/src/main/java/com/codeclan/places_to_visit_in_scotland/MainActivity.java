@@ -66,8 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<Place> myList = gson.fromJson(favourites, placesArrayList.getType());
 
-        //Create ListView with list_items
-        //Use setTag(a Place object) in TopPlaceAdapter to setTag of a ListItem aplace
+
 
 
 
