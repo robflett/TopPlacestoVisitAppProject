@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         TypeToken<ArrayList<Place>> placesArrayList = new TypeToken<ArrayList<Place>>(){};
 
-        ArrayList<Place> myList = gson.fromJson(favourites, placesArrayList.getType());
+        ArrayList<Place> MyList = gson.fromJson(favourites, placesArrayList.getType());
 
 
 
@@ -126,6 +126,16 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.activity_main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        if (item.getItemId() == R.id.add_new_place){
+            Intent intent = new Intent(this, addNewPlaceActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

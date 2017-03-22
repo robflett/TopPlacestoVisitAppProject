@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codeclan.places_to_visit_in_scotland.addNewPlaceActivity">
+
+    <Button
+        android:id="@+id/addBtn"
+        android:text="Add New Place"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addPlace"/>
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:drawSelectorOnTop="false"
+        />
+
+</android.support.constraint.ConstraintLayout>
