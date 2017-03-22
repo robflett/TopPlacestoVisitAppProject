@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.codeclan.places_to_visit_in_scotland.addNewPlaceActivity">
@@ -34,11 +35,11 @@
         android:layout_below="@+id/newplaceText"
         android:onClick="addnewClicked"/>
 
-    <ListView
-        android:id="@android:id/list"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:drawSelectorOnTop="false"
-        />
+    <!--<ListView-->
+        <!--android:id="@android:id/list"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:drawSelectorOnTop="false"-->
+        <!--/>-->
 
 </android.support.constraint.ConstraintLayout>

@@ -25,7 +25,18 @@ public class addNewPlaceActivity extends AppCompatActivity {
     }
 
     public void addnewClicked(View view) {
+        String newPlaceAdded = newplaceView.getText().toString();
 
+        if (!newPlaceAdded.isEmpty()) {
+
+            Intent added = new Intent();
+            added.putExtra(ADD_NEW_PLACE, newPlaceAdded);
+            setResult(RESULT_OK, added);
+
+        } else {
+            setResult(RESULT_CANCELED);
+        }
+        finish();
     }
 
     @Override

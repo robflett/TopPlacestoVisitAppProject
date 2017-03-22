@@ -23,6 +23,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final int ADD_PLACE = 1;
+
     public static final String LISTPLACE = "MyList";
 
     ArrayList<Place> listing;
@@ -56,9 +58,6 @@ public class MainActivity extends AppCompatActivity {
             editor.apply();
 
         }
-        //Check if favourites.equals("null");
-        //if it's "null" save listing to sharedPreferences
-        //Else carry on
 
 
 
@@ -156,6 +155,21 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int addedplace, int newlist, Intent toList) {
+
+        if (addedplace == ADD_PLACE) {
+
+            if (newlist == RESULT_OK) {
+
+                Place newplace = toList.getStringExtra(addNewPlaceActivity.ADD_NEW_PLACE);
+                listing.add(newplace);
+
+                TopPlaceAdapter.notifyDataSetChanged();
+            }
+        }
     }
 
 
