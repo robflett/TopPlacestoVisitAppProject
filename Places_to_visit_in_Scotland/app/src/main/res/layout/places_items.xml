@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:onClick="onPlaceClicked">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="onPlaceClicked">
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--tools:src="@drawable/scotland"-->
+        <!--android:id="@+id/main_art"/>-->
 
 
     <TextView
@@ -27,17 +36,7 @@
             android:layout_height="wrap_content"
             />
 
-        <!--<TextView-->
-            <!--android:id="@+id/location"-->
-            <!--android:textSize="14dp"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content" />-->
 
-        <!--<TextView-->
-            <!--android:id="@+id/activity"-->
-            <!--android:textSize="14dp"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content" />-->
 
     </LinearLayout>
 

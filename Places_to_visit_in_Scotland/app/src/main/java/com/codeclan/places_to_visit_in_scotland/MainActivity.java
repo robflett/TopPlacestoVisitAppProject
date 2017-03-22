@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String LISTPLACE = "MyList";
 
+
+
     ArrayList<Place> listing;
     TopPlacesinScotlandtoVisit topPlaces;
 
@@ -34,8 +37,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ImageView image = (ImageView) findViewById(R.id.main_art);
+
         topPlaces = new TopPlacesinScotlandtoVisit();
         listing = topPlaces.getList();
+
 
 
 

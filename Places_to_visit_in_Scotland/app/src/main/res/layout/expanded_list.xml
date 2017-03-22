@@ -7,8 +7,11 @@
         android:id="@+id/expanded_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:textSize="20dp"
+        android:padding="30dp"
         />
 
 </LinearLayout>
