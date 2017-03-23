@@ -28,8 +28,8 @@
 
         <TextView
             android:id="@+id/placename"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:textSize="20dp"
             android:padding="30dp"
 
@@ -39,8 +39,8 @@
 
         <TextView
         android:id="@+id/location"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:textSize="20dp"
             android:padding="30dp"
 
@@ -49,8 +49,8 @@
 
         <TextView
         android:id="@+id/activity"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
             android:textSize="20dp"
             android:padding="30dp"
         android:layout_width="match_parent"
@@ -61,8 +61,8 @@
             android:text="@string/urllink"
             android:autoLink="web"
             android:id="@+id/urllink"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:textSize="20dp"
             android:padding="30dp"
 

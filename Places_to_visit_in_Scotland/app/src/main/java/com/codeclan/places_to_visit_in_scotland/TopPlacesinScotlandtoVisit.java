@@ -33,7 +33,7 @@ public class TopPlacesinScotlandtoVisit {
         listing.add(new Place(13, "The Peat Road", "Sutherland", "Walking"));
         listing.add(new Place(14, "St Andrews", "East Coast of Scotland", "Historic"));
         listing.add(new Place(15, "Arthurs Seat", "Edinburgh", "Walking"));
-        listing.add(new Place(16, "Loch Vennacher", "Stirlingshire", "Sailing"));
+        listing.add(new Place(16, "Loch Venachar", "Stirlingshire", "Sailing"));
         listing.add(new Place(17, "Thornhill", "Stirlingshire", "Food"));
         listing.add(new Place(18, "Mallaig", "West Coast of Scotland", "Food"));
         listing.add(new Place(19, "Leith Shore", "Edinburgh", "Food"));
