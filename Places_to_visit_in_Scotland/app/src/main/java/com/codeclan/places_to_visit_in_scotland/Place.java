@@ -24,6 +24,9 @@ public class Place implements Serializable{
         this.location = location;
         this.activity = activity;
 
+//        NEXT - Remove Ranking as a property. Maybe replace with image of local area. Regions of Scotland.
+//        User would then click from options when creating their own place.
+
     }
 
     public Integer getRanking() {

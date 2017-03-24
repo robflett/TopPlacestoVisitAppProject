@@ -34,6 +34,7 @@ public class Filter_by_Walking_Activity extends AppCompatActivity {
 
     }
 
+//    NEXT - Below keep the buttons and menu in a superclass that the other activities inherit from.
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

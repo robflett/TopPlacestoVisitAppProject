@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String LISTPLACE = "MyList";
 
+//    NEXT - Change listView to use more block colours. Move away from the TopList format.
+//   NEXT - Refactor the displayed list so it has more info in a more pleasing format.
+
+//    NEXT - Complete the add function and ensure SharedPref is working.
+
 
 
     ArrayList<Place> listing;
